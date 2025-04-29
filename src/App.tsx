@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/sambow-vibrant-splash-page">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/app" element={<AppLanding />} />
