@@ -10,11 +10,10 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
+// Create a client
 const queryClient = new QueryClient();
 
-// Using HashRouter instead of BrowserRouter for GitHub Pages
-// HashRouter works better with GitHub Pages as it uses the hash part of the URL
-// which doesn't require server-side routing support
+// Using HashRouter for GitHub Pages compatibility
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
