@@ -7,6 +7,7 @@ import FeatureCard from '@/components/FeatureCard';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import LiveBroadcastTemplates from '@/components/LiveBroadcastTemplates';
+import PhoneMockups from '@/components/PhoneMockups';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Globe, DollarSign, Video, Shield } from 'lucide-react';
@@ -78,6 +79,9 @@ const Index = () => {
 
         {/* Live Broadcast Templates Section */}
         <LiveBroadcastTemplates />
+
+        {/* Phone Mockups Section */}
+        <PhoneMockups />
 
         {/* Features Section */}
         <section className="w-full max-w-5xl mx-auto px-4 mb-16">
