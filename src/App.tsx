@@ -10,10 +10,10 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
-// Create a client
+// إنشاء عميل للاستعلامات
 const queryClient = new QueryClient();
 
-// Using HashRouter for GitHub Pages compatibility
+// استخدام HashRouter للتوافق مع GitHub Pages
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>

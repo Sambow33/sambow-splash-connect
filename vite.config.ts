@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Base path MUST be "./" for GitHub Pages
+  // استخدام المسار النسبي للعمل بشكل صحيح مع GitHub Pages
   base: "./",
   server: {
     host: "::",
@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
-    // Disable code splitting for GitHub Pages
+    // تكوينات محددة لـ GitHub Pages لمنع مشاكل المسار
     rollupOptions: {
       output: {
         manualChunks: undefined,
