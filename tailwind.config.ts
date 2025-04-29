@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				royal: {
+					purple: '#8B5CF6',
+					dark: '#6D28D9',
+					light: '#A78BFA',
+					gold: '#F7B801',
 				}
 			},
 			borderRadius: {
@@ -84,12 +91,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(1)',
+					},
+					'50%': { 
+						opacity: '0.8',
+						filter: 'brightness(1.2) drop-shadow(0 0 15px rgba(139, 92, 246, 0.8))',
+					}
+				},
+				'gradient-shift': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'bounce-slight': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 8s ease infinite',
+				'bounce-slight': 'bounce-slight 2s ease-in-out infinite'
+			},
+			fontFamily: {
+				'sans': ['Poppins', 'sans-serif'],
+				'display': ['Montserrat', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-royal': 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 50%, #4C1D95 100%)',
+				'gradient-conic': 'conic-gradient(from 225deg, #8B5CF6, #6D28D9)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
