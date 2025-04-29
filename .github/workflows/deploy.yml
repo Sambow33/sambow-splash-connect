@@ -27,10 +27,10 @@ jobs:
 
       - name: Create 404.html
         run: cp dist/index.html dist/404.html
-
+        
       - name: Copy CNAME to dist
         run: cp public/CNAME dist/ || echo "No CNAME file found"
-
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

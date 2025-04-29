@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Base path needs to be ./ for GitHub Pages
+  // Base path MUST be "./" for GitHub Pages
   base: "./",
   server: {
     host: "::",
@@ -24,11 +24,13 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
-    // Disable code splitting to avoid path issues
-    assetsInlineLimit: 0,
+    // Disable code splitting for GitHub Pages
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]'
       },
     },
   },
