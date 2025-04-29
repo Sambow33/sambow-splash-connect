@@ -6,7 +6,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/sambow-vibrant-splash-page/",
+  // Use a dot (.) instead of a full path for GitHub Pages deployment
+  base: "./",
   server: {
     host: "::",
     port: 8080,
