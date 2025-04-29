@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // استخدام المسار النسبي للعمل بشكل صحيح مع GitHub Pages
-  base: "./",
+  base: "",
   server: {
     host: "::",
     port: 8080,
