@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Index from "./pages/Index";
 import AppLanding from "./pages/AppLanding";
 import Terms from "./pages/Terms";
@@ -12,12 +12,15 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Using HashRouter instead of BrowserRouter for GitHub Pages
+// HashRouter works better with GitHub Pages as it uses the hash part of the URL
+// which doesn't require server-side routing support
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/sambow-vibrant-splash-page">
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/app" element={<AppLanding />} />
@@ -25,7 +28,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
